@@ -2,9 +2,9 @@
 
 module top(
 	input mclk_in,
+	input tdm_in,
 	output bclk,
 	output wclk,
-	input tdm_in,
 	output tdm_out
     );
 
@@ -24,9 +24,9 @@ module top(
 
 	audio_clkgen clkgen (
 		.mclk(mclk_in), 
+		.cnt256_n(cnt256_n)
 		.bclk(bclk), 
 		.wclk(wclk), 
-		.cnt256_n(cnt256_n)
 	);
 
 	audio_processing dsp(

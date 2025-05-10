@@ -1,4 +1,10 @@
 `timescale 1ns / 1ps
+// `include "tdm_input.v"
+// `include "audio_clkgen.v"
+// `include "audio_processing.v"
+// `include "tdm_output.v"
+// `include "top.v"
+
 module tdm_gen(
     input bclk,
     input wclk,
