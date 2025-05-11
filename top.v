@@ -24,7 +24,7 @@ module top(
 
 	audio_clkgen clkgen (
 		.mclk(mclk_in), 
-		.cnt256_n(cnt256_n)
+		.cnt256_n(cnt256_n),
 		.bclk(bclk), 
 		.wclk(wclk), 
 	);

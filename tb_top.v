@@ -1,4 +1,5 @@
 `timescale 1ns / 1ps
+
 module tb_top;
 
 	// Inputs
@@ -13,10 +14,10 @@ module tb_top;
 	// Instantiate the Unit Under Test (UUT)
 	top uut (
 		.mclk_in(mclk), 
-		.bclk(bclk), 
-		.wclk(wclk), 
-
 		.tdm_in(tdm_in), 
+
+		.wclk(wclk), 
+		.bclk(bclk), 
 		.tdm_out(tdm_out)
 	);
 
@@ -26,7 +27,7 @@ module tb_top;
 		.tdm_out(tdm_in)
 	);
 
-	//Master Clock¶¬
+	//Master Clockï¿½ï¿½ï¿½ï¿½
 	initial begin
 		mclk = 1;
 		forever begin
