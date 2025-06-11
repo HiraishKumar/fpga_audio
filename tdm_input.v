@@ -8,12 +8,12 @@ module tdm_input(
 );
     reg [63:0] data_reg;
     always @(posedge mclk)begin
-        if(cnt256_n == 8'd0)begin
+        if(cnt256_n == 8'd0)begin               // remains constant for 256 mclk cycles
             ch1_out <= data_reg[63:48];
             ch2_out <= data_reg[31:16];
         end
-        else if(cnt256_n[1:0] == 2'd2)begin
-            data_reg <= {data_reg[62:0], tdm_in};
+        else if(cnt256_n[1:0] == 2'd2)begin     // Once every 4 mclk
+            data_reg <= {data_reg[62:0], tdm_in};   // Serial in every 4 mclk
         end
         else begin
             //Latch

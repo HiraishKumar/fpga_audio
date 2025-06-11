@@ -26,7 +26,7 @@ module top(
 		.mclk(mclk_in), 
 		.cnt256_n(cnt256_n),
 		.bclk(bclk), 
-		.wclk(wclk), 
+		.wclk(wclk) 
 	);
 
 	audio_processing dsp(

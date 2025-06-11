@@ -1,8 +1,8 @@
 `timescale 1ns / 1ps
 module audio_clkgen(
     input mclk,
-    output bclk,
-    output wclk,
+    output bclk,            // 1:2 mclk devider
+    output wclk,            // 1:128 mclk devider 
     output [7:0] cnt256_n
 //Generates bit_clk, wrd_clk & 8 Bit decrementing sync Clk//
 );
